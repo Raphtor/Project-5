@@ -36,6 +36,7 @@ public class A_P4 {
 		graph = new GraphM(codes.size());
 		for(int k = 0; k < aPorts.size(); k++){
 			graph.addEdge(codes.get(aPorts.get(k)), codes.get(dPorts.get(k)), miles.get(k));
+			graph.addEdge(codes.get(dPorts.get(k)), codes.get(aPorts.get(k)), miles.get(k));
 		}
 	}
 }
