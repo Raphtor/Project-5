@@ -1,0 +1,5 @@
+P5B_README
+This was really simple. I just read the file and increased the frequency in a table by
+1 every time an airport was a departure or an arrival. The order of the airports was
+determined by the order of the original airports. These corresponded to the index of the
+table.

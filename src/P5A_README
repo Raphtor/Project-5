@@ -1,0 +1,15 @@
+
+
+P5A_README
+I made a node and edge class, which are self-explanatory. The graph class has sets of these 
+(an ArrayList of nodes and a TreeSet of edges). For finding paths, I used djikstra's algorithim
+ for the weighted and a breadth first search for the unweighted. However, the breadth first search 
+ does break ties with distance because the edges are sorted in the treeset by weight. 
+
+Djikstra's algorithm has O(kN^2) complexity, because the neighborsUnv method is N and so is the 
+outer loop of Djikstra's. These are upper limit functions.
+
+The breadth first search is also O(kN^2) for the same reason (its just a variation of the Djikstra's).
+
+The graph is space efficient because it doesn't create clones of anything in loops (aka everything is a
+reference so things are not unnecessarily created. 
