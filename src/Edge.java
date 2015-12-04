@@ -1,7 +1,7 @@
 /**
  * Edge class.
  * 
- * @author r42xe_000
+ * @author Raphael Norman-Tenazas rtenaza1
  *
  */
 public class Edge implements Comparable<Edge> {
@@ -81,8 +81,11 @@ public class Edge implements Comparable<Edge> {
 
     @Override
     public int compareTo(Edge other) {
-        return (this.weight - other.weight) 
-                + this.begin.getName().compareTo(other.getBegin().getName());
+        if (this.weight - other.weight == 0) {
+            return this.begin.compareTo(other.getBegin()) 
+                    - this.end.compareTo(other.getEnd());
+        }
+        return (this.weight - other.weight);
     }
 
     /*
@@ -92,7 +95,7 @@ public class Edge implements Comparable<Edge> {
      */
     @Override
     public int hashCode() {
-        return this.end.hashCode() + this.begin.hashCode() + this.weight;
+        return this.end.hashCode() + this.begin.hashCode() * this.weight;
     }
 
     /*
@@ -106,8 +109,16 @@ public class Edge implements Comparable<Edge> {
             return false;
         }
         Edge temp = (Edge) obj;
-        return temp.begin.equals(temp.begin) 
-                && temp.end.equals(temp.end) && this.weight == temp.weight;
+        return this.begin.equals(temp.begin) 
+                && this.end.equals(temp.end); //&& this.weight == temp.weight;
+    }
+    /**
+     * toString.
+     * @return String
+     */
+    public String toString() {
+        return "[" + this.getBegin().toString() 
+                + " " + this.getEnd().toString() + " " + this.weight + "]";
     }
 
 }

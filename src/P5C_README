@@ -1,0 +1,11 @@
+P5C_README
+
+Also pretty simple. Just a version of kruskal's algorithm. 
+
+It has time complexity O(kN^2) because (ironically) the 
+printing part has two loops with N iterations. 
+
+Kruskal's algorithm has a complexity of O(kMN) because the
+outer loop (while(!edges.isEmpty()) iterates M times, while 
+the inner loop (for (TreeSet<Node> tsn : nodes)) iterates 
+(at maximum) N times.

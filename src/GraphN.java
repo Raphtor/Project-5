@@ -5,7 +5,7 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 /**
  * Graph class.
- * @author r42xe_000
+ * @author Raphael Norman-Tenazas rtenaza1
  *
  */
 public class GraphN {
@@ -237,6 +237,24 @@ public class GraphN {
             }
         }
         return prevTree;
+    }
+    /**
+     * Gets an edge given the nodes.
+     * @param b
+     * Beginning node
+     * @param e
+     * End node
+     * @return
+     * The edge
+     */
+    public Edge getEdge(Node b, Node e) {
+        for (Edge ed : this.edges) {
+            if ((ed.getBegin() == b || ed.getBegin() == e) 
+                    && (ed.getEnd() == b || ed.getEnd() == e)) {
+                return ed;
+            }
+        }
+        return null;
     }
 
 }

@@ -1,7 +1,7 @@
 /**
  * Node class.
  * 
- * @author r42xe_000
+ * @author Raphael Norman-Tenazas rtenaza1
  *
  */
 public class Node implements Comparable<Node> {

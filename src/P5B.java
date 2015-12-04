@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 /**
  * Main class for p5b.
- * @author r42xe_000
+ * @author Raphael Norman-Tenazas rtenaza1
  *
  */
 public final class P5B {

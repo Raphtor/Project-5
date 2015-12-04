@@ -3,3 +3,5 @@ This was really simple. I just read the file and increased the frequency in a ta
 1 every time an airport was a departure or an arrival. The order of the airports was
 determined by the order of the original airports. These corresponded to the index of the
 table.
+
+Has time complexity O(kN^2) because of the printing function.
